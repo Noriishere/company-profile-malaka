@@ -1,0 +1,10 @@
+{
+    "name": "malaka/company-profile",
+    "description": "Web company profile malaka",
+    "autoload": {
+        "psr-4": {
+            "Malaka\\CompanyProfile\\": "app/"
+        }
+    },
+    "require": {}
+}
