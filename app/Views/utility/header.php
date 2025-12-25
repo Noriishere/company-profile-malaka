@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Displin | Malaka</title>
+    <title><?= $data["Judul"] ?></title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsif.css">
     <link rel="stylesheet" href="css/style-divisi.css">
     <link rel="shortcut icon" href="assets/logo malaka.png" type="image/x-icon">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
+
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -37,8 +37,14 @@
         rel="stylesheet">
 
 </head>
+<style>
+    a {
+        text-decoration: none;
+        
+    }
+</style>
 
 <body>
-    <?php 
-     include "navbar.php";
-     ?>
+    <?php
+    include "navbar.php";
+    ?>

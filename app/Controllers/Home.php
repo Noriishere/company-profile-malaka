@@ -1,12 +1,14 @@
 <?php
 namespace Malaka\CompanyProfile\Controllers;
 
-use Malaka\CompanyProfile\Core\Controller as CoreController;
+use Malaka\CompanyProfile\Core\Controller;
 
-class Home extends CoreController {
+class Home extends Controller {
     public function index(){
-        $this->view('utility/header');
-        $this->view('app/index');
-        $this->view('utility/footer');
+        
+        $data['Judul'] = "Malaka | Mahasiswa Melawan Narkotika";
+        $this->view('utility/header', $data);
+        $this->view('app/index', $data);
+        $this->view('utility/footer', $data);
     }
 }

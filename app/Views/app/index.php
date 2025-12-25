@@ -201,7 +201,7 @@
                 <p class="mt-4 text-center font-medium">Badan Pengurus Harian</p>
             </a>
 
-            <a href="Jarkom.html" class="group">
+            <a href="<?= BASE_URL ?>jarkom" class="group">
                 <img src="assets/divisi/jarkom.png" class="rounded-lg shadow group-hover:scale-105 transition">
                 <p class="mt-4 text-center font-medium">Divisi Jarkom</p>
             </a>
