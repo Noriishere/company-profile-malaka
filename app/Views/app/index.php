@@ -1,6 +1,6 @@
 <section id="tentang-kami" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-
+        <p>Total Pengunjung: <?= $visitors ?></p>
         <!-- Title -->
         <div class="text-center mb-14">
             <h1 class="text-4xl font-bold tracking-wide">Tentang Kami</h1>

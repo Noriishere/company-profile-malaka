@@ -1,6 +1,6 @@
 <?php
 
-namespace FpSmt3\WebTracker\Core;
+namespace Malaka\CompanyProfile\Core;
 
 use PDO;
 use PDOException;
