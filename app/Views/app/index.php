@@ -1,5 +1,36 @@
 <section id="tentang-kami" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+            <div>
+                <h3 class="text-lg uppercase tracking-widest text-gray-500">
+                    Unit Kegiatan Mahasiswa
+                </h3>
+
+                <h1 class="text-4xl md:text-5xl font-bold mt-4 leading-tight">
+                    Mahasiswa Melawan Narkotika
+                </h1>
+
+                <h3 class="text-lg mt-4 text-gray-600">
+                    Universitas Buana Perjuangan Karawang
+                </h3>
+
+                <a href="https://youtu.be/HtChAde3gvs?si=JiSCS-Oz6djA2jSN"
+                    target="_blank"
+                    class="inline-block mt-8 px-8 py-3 bg-gray-800 text-white rounded-lg
+                          visited:text-white active:text-white focus:text-white
+                          hover:scale-105 transition">
+                    Lihat Video
+                </a>
+            </div>
+
+            <div class="flex justify-center">
+                <img src="assets/hero/hero8.png"
+                    alt="Hero MALAKA"
+                    class="m-15 max-w-md w-full rounded-xl">
+            </div>
+
+        </div>
         <p>Total Pengunjung: <?= $visitors ?></p>
         <!-- Title -->
         <div class="text-center mb-14">

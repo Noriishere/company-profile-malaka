@@ -13,15 +13,15 @@ class App
     {
         $url = $this->parseUrl();
 
-        // if (!empty($url[0]) && strtolower($url[0]) === 'admin') {
-        //     $this->folder = 'Admin';
-        //     unset($url[0]);
-        //     $url = array_values($url);
+        if (!empty($url[0]) && strtolower($url[0]) === 'admin') {
+            $this->folder = 'Admin';
+            unset($url[0]);
+            $url = array_values($url);
         // } elseif (!empty($url[0]) && strtolower($url[0]) === 'user') {
         //     $this->folder = 'User';
         //     unset($url[0]);
         //     $url = array_values($url);
-        // }
+        }
 
         if (!empty($url[0])) {
             $this->controller = ucfirst($url[0]);
