@@ -1,8 +1,4 @@
-<nav x-data="{ 
-        mobileOpen: false,
-        dropdown: null 
-    }"
-    class="w-full py-4 bg-white">
+<nav class="w-full py-4 bg-white relative">
 
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
@@ -14,22 +10,19 @@
         <ul class="hidden lg:flex items-center gap-8 font-medium">
 
             <li><a href="index.html" class="nav-link">Beranda</a></li>
-
             <li><a href="#tentang-kami" class="nav-link">Tentang Kami</a></li>
 
+            <!-- DROPDOWN DIVISI -->
             <li class="relative">
                 <button
-                    @click="dropdown === 'divisi' ? dropdown = null : dropdown = 'divisi'"
-                    @keydown.escape.window="dropdown = null"
-                    :aria-expanded="dropdown === 'divisi'"
-                    class="nav-link flex items-center gap-1">
+                    class="nav-link flex items-center gap-1 dropdown-toggle"
+                    data-dropdown="divisi"
+                    aria-expanded="false">
                     Divisi
+                    <span class="text-xs">▼</span>
                 </button>
 
-                <ul x-show="dropdown === 'divisi'"
-                    x-transition
-                    @click.outside="dropdown = null"
-                    class="absolute mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50">
+                <ul class="dropdown-menu hidden absolute mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50">
                     <li><a href="BPH.html" class="dropdown-item">Badan Pengurus Harian</a></li>
                     <li><a href="Jarkom.html" class="dropdown-item">Jaringan & Komunikasi</a></li>
                     <li><a href="Disiplin.html" class="dropdown-item">Disiplin</a></li>
@@ -43,27 +36,24 @@
             <li><a href="#footer" class="nav-link">Kontak</a></li>
 
             <li>
-                <a href="https://malakaubpkarawang.my.id/Galeri-Kegiatan/foto.php"
-                   class="nav-link">
+                <a href="https://malakaubpkarawang.my.id/Galeri-Kegiatan/foto.php" class="nav-link">
                     Galeri
                 </a>
             </li>
 
             <li><a href="saran/contact_form.php" class="nav-link">Saran</a></li>
 
+            <!-- DROPDOWN WEBSITE -->
             <li class="relative">
                 <button
-                    @click="dropdown === 'website' ? dropdown = null : dropdown = 'website'"
-                    @keydown.escape.window="dropdown = null"
-                    :aria-expanded="dropdown === 'website'"
-                    class="nav-link flex items-center gap-1">
+                    class="nav-link flex items-center gap-1 dropdown-toggle"
+                    data-dropdown="website"
+                    aria-expanded="false">
                     Website Kami
+                    <span class="text-xs">▼</span>
                 </button>
 
-                <ul x-show="dropdown === 'website'"
-                    x-transition
-                    @click.outside="dropdown = null"
-                    class="absolute mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                <ul class="dropdown-menu hidden absolute mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
                     <li><a href="uangkas/index.php" class="dropdown-item">Uangkas MALAKA</a></li>
                     <li><a href="absen/index.php" class="dropdown-item">Absensi MALAKA</a></li>
                 </ul>
@@ -71,14 +61,16 @@
 
         </ul>
 
-        <button @click="mobileOpen = !mobileOpen"
+        <!-- MOBILE BUTTON -->
+        <button id="mobile-toggle"
                 aria-label="Toggle menu"
                 class="lg:hidden text-2xl text-gray-800">
             ☰
         </button>
     </div>
 
-    <div x-show="mobileOpen" x-transition class="lg:hidden bg-white shadow-md">
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
         <ul class="flex flex-col px-6 py-4 space-y-3 font-medium">
             <li><a href="index.html" class="nav-link">Beranda</a></li>
             <li><a href="#tentang-kami" class="nav-link">Tentang Kami</a></li>
@@ -90,15 +82,11 @@
             <li><a href="Perencanaan.html" class="nav-link">Perencanaan</a></li>
             <li><a href="psda.html" class="nav-link">PSDA</a></li>
             <li><a href="#footer" class="nav-link">Kontak</a></li>
-            <li>
-                <a href="https://malakaubpkarawang.my.id/Galeri-Kegiatan/foto.php"
-                   class="nav-link">
-                    Galeri
-                </a>
-            </li>
+            <li><a href="https://malakaubpkarawang.my.id/Galeri-Kegiatan/foto.php" class="nav-link">Galeri</a></li>
             <li><a href="saran/contact_form.php" class="nav-link">Saran</a></li>
             <li><a href="uangkas/index.php" class="nav-link">Uangkas MALAKA</a></li>
             <li><a href="absen/index.php" class="nav-link">Absensi MALAKA</a></li>
         </ul>
     </div>
 </nav>
+<script src="<?= BASE_URL ?>js/navbar.js"></script>

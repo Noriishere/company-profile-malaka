@@ -94,8 +94,8 @@ function pillClasses(bool $active): string
     $base = 'flex items-center gap-4 px-5 py-3 rounded-xl text-[15px] font-medium transition-all duration-200';
 
     return $active
-        ? $base . ' bg-brand-500/20 text-brand-500'
-        : $base . ' text-gray-600 hover:bg-brand-500/10 hover:text-brand-500';
+        ? $base . ' bg-black text-brand-500'
+        : $base . ' text-black hover:bg-abu hover:text-biru';
 }
 
 ?>
@@ -118,23 +118,32 @@ function pillClasses(bool $active): string
             height: 300,
             menubar: false,
             plugins: 'lists link image media code table fullscreen',
-            toolbar:
-                'undo redo | bold italic underline code | ' +
+            toolbar: 'undo redo | h2 h3 | bold italic underline code | ' +
                 'alignleft aligncenter alignright | ' +
                 'bullist numlist | link | fullscreen code',
             branding: false
         });
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        biru: '#2C61A7',
+                        abu: '#E4E2DC'
+                    }
+                }
+            }
+        }
     </script>
 </head>
 
-<body class="bg-background">
-    <button onclick="toggleSidebar()" class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-background shadow text-gray-700 lg:hidden">
+<body class="bg-abu">
+    <button onclick="toggleSidebar()" class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-biru shadow text-white lg:hidden">
         <i class="fa-solid fa-bars text-lg"></i>
     </button>
 
     <div id="sidebarOverlay" onclick="toggleSidebar()" class="fixed inset-0 z-40 bg-black/40 hidden lg:hidden"></div>
 
-    <aside id="sidebar" class="fixed top-0 left-0 z-50 h-screen w-64 flex flex-col gap-6 py-6 px-4 border-r border-gray-200 bg-backgroun transition-transform duration-300 transform -translate-x-full lg:translate-x-0">
+    <aside id="sidebar" class="bg-biru text-white fixed top-0 left-0 z-50 h-screen w-64 flex flex-col gap-6 py-6 px-4 border-r border-gray-200 bg-backgroun transition-transform duration-300 transform -translate-x-full lg:translate-x-0">
         <div class="flex items-center gap-3 px-2">
             <img src="<?= BASE_URL ?>assets/logo_malaka.png" class="h-10 w-10">
             <span class="text-2xl font-bold text-brand-500">
@@ -191,7 +200,3 @@ function pillClasses(bool $active): string
             document.getElementById('sidebarOverlay').classList.toggle('hidden');
         }
     </script>
-
-</body>
-
-</html>

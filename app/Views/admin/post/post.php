@@ -1,4 +1,4 @@
-<div class="min-h-screen ml-0 lg:ml-64 px-4 sm:px-6 lg:px-8 pt-6 space-y-8">
+<div class="min-h-screen ml-0 lg:ml-64 px-4 sm:px-6 lg:px-8 pt-20 lg:pt-10 space-y-8">  
 
     <!-- HEADER -->
     <div>
