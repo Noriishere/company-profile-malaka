@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 logo">
                             <a href="#hero">
-                                <img src="assets/logo_malaka.png" style="height: 250px; width: 250px;" alt="">
+                                <img src="<?= BASE_URL ?>assets/logo_malaka.png" style="height: 250px; width: 250px;" alt="">
                             </a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -39,12 +39,7 @@
 
 <div
     style="position: fixed; bottom: 5px; right: 5px; font-size: 10px; color: #aaa; opacity: 0.6; background-color: transparent;">
-    Website ini dibuat oleh <a
-        href="https://www.instagram.com/r_rafi2207?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank" style="color: #aaa; text-decoration: none;"><strong>Rafi Naufal Amrulloh</strong></a> –
-    Mahasiswa Teknik Informatika UBP Karawang 2023<br>
-    Dikelola oleh akun TikTok <a href="https://www.tiktok.com/@coding_seru" target="_blank"
-        style="color: #007bff; text-decoration: none;">@coding_seru</a>
+    Website ini dibuat oleh TIM DIGITALISASI MALAKA
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

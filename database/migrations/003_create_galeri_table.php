@@ -7,6 +7,8 @@ return [
         $db->exec("
             CREATE TABLE IF NOT EXISTS galeri (
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                title varchar(100) NOT NULL unique,
+                link varchar(100) NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ");

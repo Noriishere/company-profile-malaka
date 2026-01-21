@@ -31,7 +31,6 @@ class VisitorServices
                 'user_agent'    => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
             ]);
         }
-
         return $this->visitorModel->visitors();
     }
 

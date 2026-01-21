@@ -1,3 +1,8 @@
+# Bikin views
+
+
+
+
 # Cara Migrasi database
 
 Ikuti tutorial agar paham

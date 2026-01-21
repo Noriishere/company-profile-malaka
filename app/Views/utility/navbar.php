@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
         <a href="index.html" class="flex items-center gap-3 text-gray-800 font-semibold">
-            <img src="assets/logo_malaka.png" alt="Logo MALAKA" class="w-12 h-12">
+            <img src="<?= BASE_URL ?>assets/logo_malaka.png" alt="Logo MALAKA" class="w-12 h-12">
             <span>MALAKA | UBP KARAWANG</span>
         </a>
 
