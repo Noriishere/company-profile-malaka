@@ -17,10 +17,10 @@ class App
             $this->folder = 'Admin';
             unset($url[0]);
             $url = array_values($url);
-        // } elseif (!empty($url[0]) && strtolower($url[0]) === 'user') {
-        //     $this->folder = 'User';
-        //     unset($url[0]);
-        //     $url = array_values($url);
+        } elseif (!empty($url[0]) && strtolower($url[0]) === 'divisi') {
+            $this->folder = 'divisi';
+            unset($url[0]);
+            $url = array_values($url);
         }
 
         if (!empty($url[0])) {

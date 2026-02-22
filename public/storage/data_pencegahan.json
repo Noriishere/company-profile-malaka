@@ -1,0 +1,65 @@
+[
+    {
+        "nama": "Muhammad Akmal Al Ghifari",
+        "jabatan": "KADIV Divisi Jaringan & Komunikasi",
+        "foto": "image/divisi/jarkom/logo malaka.png",
+        "ultah": "12 Jan",
+        "instagram": "rafinaufal"
+    },
+    {
+        "nama": "Septian Eka Putra",
+        "jabatan": "WAKADIV Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "24 Mar",
+        "instagram": "sitiaminah"
+    },
+    {
+        "nama": "Budi Santoso",
+        "jabatan": "Anggota Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "05 Agu",
+        "instagram": "budisan"
+    },
+    {
+        "nama": "Dina Permata",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "11 Nov",
+        "instagram": "dinapermata"
+    },
+    {
+        "nama": "Aerly Imeldha Vasyha",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "30 Des",
+        "instagram": "ekopras"
+    },
+    {
+        "nama": "Lita",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "30 Des",
+        "instagram": "ekopras"
+    },
+    {
+        "nama": "Juwan",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "30 Des",
+        "instagram": "ekopras"
+    },
+    {
+        "nama": "Irfan",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "30 Des",
+        "instagram": "ekopras"
+    },
+    {
+        "nama": "Haila",
+        "jabatan": "Divisi Jaringan & Komunikasi",
+        "foto": "../img/acel.png",
+        "ultah": "30 Des",
+        "instagram": "ekopras"
+    }
+]

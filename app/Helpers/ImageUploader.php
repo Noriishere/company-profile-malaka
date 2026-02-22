@@ -14,9 +14,8 @@ trait ImageUploader
             throw new \Exception('Ukuran gambar maksimal 2MB');
         }
 
-        $allowedMime = ['image/jpeg', 'image/png', 'image/webp'];
+        $allowedMime = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
         $mime = mime_content_type($file['tmp_name']);
-
         if (!in_array($mime, $allowedMime, true)) {
             throw new \Exception('Format gambar tidak didukung');
         }
@@ -25,6 +24,7 @@ trait ImageUploader
             'image/jpeg' => 'jpg',
             'image/png'  => 'png',
             'image/webp' => 'webp',
+            'image/jpg'  => 'jpg',
             default => throw new \Exception('Format tidak valid')
         };
 

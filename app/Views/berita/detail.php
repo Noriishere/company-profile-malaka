@@ -1,50 +1,87 @@
-<article class="max-w-4xl mx-auto px-6 py-12">
+<main class="w-full bg-white min-h-screen font-poppins text-slate-800">
 
-    <!-- JUDUL -->
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        <?= htmlspecialchars($data['post']['title']) ?>
-    </h1>
+    <!-- ================= HEADER ================= -->
+    <section class="pt-16 pb-10">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+            
+            <div class="flex items-center justify-center gap-2 text-sm text-slate-500 font-medium mb-6">
+                <a href="/index.php" class="hover:text-primary transition-colors">Beranda</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <a href="/berita" class="hover:text-primary transition-colors">Berita</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span class="text-primary">Detail Berita</span>
+            </div>
 
-    <!-- META -->
-    <div class="text-sm text-gray-500 mb-8">
-        Diposting pada
-        <?= date('d F Y', strtotime($data['post']['created_at'])) ?>
-    </div>
+            <!-- CATEGORY -->
+            <span class="inline-flex items-center justify-center bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+                <?= htmlspecialchars($data['post']['category']) ?>
+            </span>
 
-    <!-- GAMBAR UTAMA -->
-    <?php if (!empty($data['post']['image1'])) : ?>
-        <img
-            src="/posts/uploads/<?= htmlspecialchars($data['post']['image1']) ?>"
-            alt="<?= htmlspecialchars($data['post']['title']) ?>"
-            class="w-full rounded-xl mb-8"
-        >
-    <?php endif; ?>
+            <!-- TITLE -->
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                <?= htmlspecialchars($data['post']['title']) ?>
+            </h1>
 
-    <!-- ISI PARAGRAF 1 -->
-    <div class="prose prose-lg max-w-none mb-10">
-        <?= $data['post']['paragraph1'] ?>
-    </div>
+            <!-- META -->
+            <div class="flex items-center justify-center gap-6 text-sm md:text-base text-slate-500 font-medium border-t border-b border-slate-100 py-4 w-fit mx-auto px-8">
+                
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>
+                        Oleh <span class="text-slate-900 font-bold">
+                            <?= htmlspecialchars($data['post']['creator']) ?>
+                        </span>
+                    </span>
+                </div>
 
-    <!-- GAMBAR KEDUA -->
-    <?php if (!empty($data['post']['image2'])) : ?>
-        <img
-            src="/uploads/<?= htmlspecialchars($data['post']['image2']) ?>"
-            class="w-full rounded-xl mb-8"
-        >
-    <?php endif; ?>
+                <div class="w-1 h-1 bg-slate-300 rounded-full"></div>
 
-    <!-- ISI PARAGRAF 2 -->
-    <?php if (!empty($data['post']['paragraph2'])) : ?>
-        <div class="prose prose-lg max-w-none">
-            <?= nl2br($data['post']['paragraph2']) ?>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-primary"></i>
+                    <span>
+                        <?= date('d F Y', strtotime($data['post']['created_at'])) ?>
+                    </span>
+                </div>
+
+            </div>
         </div>
+    </section>
+
+    <!-- ================= THUMBNAIL ================= -->
+    <?php if (!empty($data['post']['thumbnail'])) : ?>
+    <section class="pb-10">
+        <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+            <div class="relative w-full aspect-video md:aspect-[21/9] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200">
+                <img 
+                    src="/posts/uploads/<?= htmlspecialchars($data['post']['thumbnail']) ?>"
+                    alt="<?= htmlspecialchars($data['post']['title']) ?>"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                >
+            </div>
+        </div>
+    </section>
     <?php endif; ?>
 
-    <!-- BACK -->
-    <div class="mt-12">
-        <a href="/berita" class="text-blue-600 font-medium">
-            ← Kembali ke Berita
-        </a>
-    </div>
+    <!-- ================= ISI BERITA ================= -->
+    <section class="pb-16">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+            
+            <article class="text-lg text-black leading-relaxed space-y-6 text-justify">
+                <?= $data['post']['paragraph'] ?>
+            </article>
 
-</article>
+            <!-- BACK BUTTON -->
+            <div class="mt-12 pt-8 border-t border-slate-100 text-center">
+                <a href="/berita"
+                   class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
+                   <i class="fa-solid fa-arrow-left"></i>
+                   Kembali ke Berita
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>

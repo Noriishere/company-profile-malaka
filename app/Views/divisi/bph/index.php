@@ -12,7 +12,7 @@
         <div class="text-center mb-8 lg:mb-16 max-w-4xl mx-auto" data-aos="fade-up">
             <h4 class="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2">Divisi & Biro</h4>
             <h2 class="text-2xl md:text-5xl font-extrabold text-slate-900 mb-4 md:mb-6">
-                Divisi <span class="text-primary"><?= htmlspecialchars($data['division']) ?></span>
+                 <span class="text-primary"><?= htmlspecialchars($data['division']) ?></span>
             </h2>
             <div class="w-16 h-1 md:w-24 md:h-1.5 bg-primary mx-auto rounded-full mb-4 md:mb-6"></div>
             <p class="text-slate-500 text-xs md:text-lg leading-relaxed px-4">

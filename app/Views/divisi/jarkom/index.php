@@ -1,287 +1,91 @@
-    <!-- Hero Section Start -->
-    <section id="hero">
-        <div class="container-fluid">
-            <!-- Navbar Start -->
-            <nav class="navbar navbar-expand-lg bg-body-tranparant">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/logo malaka.png" alt="Logo" width="50" height="45" class="d-inline-block align-text-top">
-                        <span>MALAKA | UBP KARAWANG</span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigasi-bar"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigasi-bar">
-                        <ul class="navbar-nav me-end mb-2 mb-lg-0 ">
-            
-                            <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-left" aria-current="page" href="index.html">Beranda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-left" aria-current="page" href="#tentang-kami">Tentang
-                                    Kami</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle hvr-underline-from-left" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Divisi
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="BPH.html">Badan Pengurus Harian</a></li>
-                                    <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="Jarkom.html">Jaringan dan Komunikasi</a></li>
-                                    <li><a class="dropdown-item" href="Disiplin.html">Disiplin </a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="Penjaminan-Mutu.html">Penjaminan Mutu</a></li>
-                                    <li><a class="dropdown-item" href="Pencegahan.html">Pencegahan</a></li>
-                                    <li><a class="dropdown-item" href="Perencanaan.html">Perencanaan</a></li>
-                                    <li><a class="dropdown-item" href="psda.html">psda</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-left" aria-current="page" href="#footer">Kontak</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-left" aria-current="page" href="https://malakaubpkarawang.my.id/Galeri-Kegiatan/foto.php">Galeri Kegiatan</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-left" aria-current="page" href="saran/contact_form.php">Saran</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle hvr-underline-from-left" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Website Kami
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="uangkas/index.php">UANGKAS MALAKA</a></li>
-                                    <li><a class="dropdown-item" href="absen/index.php">ABSENSI MALAKA </a>
-                                </ul>
-                            </li>
-                            
-            
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Navbar End -->
+<style>
+    /* Fix Glitch Radius */
+    .card-hover-fix {
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        mask-image: radial-gradient(white, black);
+    }
+</style>
 
-            <!-- Banner Start -->
-            <div class="container banner">
-                <div class="container">
-                    <div class="row align-items-center box-title">
-                        <div class="col-lg-12 text-center ">
-                            <h1 class="hvr-underline-from-left">Divisi Jaringan dan Komunikasi</h1>
+<section class="w-full pt-8 pb-20 bg-slate-50 min-h-screen">
+    <div class="container mx-auto px-4 lg:px-8">
+
+        <div class="text-center mb-8 lg:mb-16 max-w-4xl mx-auto" data-aos="fade-up">
+            <h4 class="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2">Divisi & Biro</h4>
+            <h2 class="text-2xl md:text-5xl font-extrabold text-slate-900 mb-4 md:mb-6">
+                Divisi <span class="text-primary"><?= htmlspecialchars($data['division']) ?></span>
+            </h2>
+            <div class="w-16 h-1 md:w-24 md:h-1.5 bg-primary mx-auto rounded-full mb-4 md:mb-6"></div>
+            <p class="text-slate-500 text-xs md:text-lg leading-relaxed px-4">
+                <?= htmlspecialchars($data['definition']) ?>
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+
+            <?php
+            // 1. Tentukan Doksli Asli
+            $json_file = 'storage/data_'.$data['json'].'.json';
+            // 2. Cek Apakah Doksli Ada
+            if (file_exists($json_file)) {
+                // 3. Ambil Doksli
+                $json_content = file_get_contents($json_file);
+                // 4. Decode JSON menjadi Array PHP
+                $members = json_decode($json_content, true);
+            } else {
+                $members = []; // Array Kosong Jika Doksli Menghilang
+                echo '<p class="col-span-4 text-center text-red-500">Data anggota tidak ditemukan.</p>';
+            }
+
+            // 5. Looping data
+            if (!empty($members)) :
+                foreach ($members as $m) :
+            ?>
+
+                    <div class="group bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-1 md:hover:-translate-y-2 flex flex-col card-hover-fix transform-gpu relative z-0">
+
+                        <div class="relative w-full aspect-[3/4] overflow-hidden bg-gray-200">
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-300"></div>
+                            <img src="<?= BASE_URL ?><?= $m['foto'] ?>" alt="<?= $m['nama'] ?>" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 backface-hidden">
+
+                            <div class="absolute top-2 right-2 md:top-3 md:right-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold text-slate-600 shadow-sm z-20 flex items-center gap-1">
+                                <i class="fa-solid fa-cake-candles text-pink-500"></i>
+                                <?= $m['ultah'] ?>
+                            </div>
                         </div>
-                        <div class="col-lg-12 describe mt-3">
-                            <p class="text-center ">Divisi Jaringan dan Komunikasi (JARKOM) adalah bagian dari UKM Mahasiswa Melawan Narkotika (MALAKA)
-                                 yang menjadi pusatnya informasi dan dokumentasi melalui
-                                sosial media Ukm Mahasiswa Melawan Narkotika.</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mt-5">
-                        <div class="col-12">
 
-                            <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper text-center">
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-nazwa.png" class="card-img-top rounded-3" alt="foto jarkom-nazwa">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Nazwa Annisatul Fadilah</h5>
-                                                <p class="card-text">KADIV JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-rafi.png" class="card-img-top rounded-3" alt="foto jarkom-rafi">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Rafi Naufal Amrulloh</h5>
-                                                <p class="card-text">WAKADIV JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-widya.png" class="card-img-top rounded-3" alt="foto jarkom-Widya">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Widya Setya Azzahra</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-candra.png" class="card-img-top rounded-3" alt="foto jarkom-Candra">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title"> Candra Febrianti Soleha</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-jesika.png" class="card-img-top rounded-3" alt="foto jarkom-Jesika">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Jesika Amelia </h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-auliya.png" class="card-img-top rounded-3" alt="foto jarkom-Auliya">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Auliya Asyipa</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-tyara.png" class="card-img-top rounded-3" alt="foto jarkom-Tyara">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Tyara Ardelia Fredlina</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-hasdian.png" class="card-img-top rounded-3" alt="foto jarkom-Hasdian">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Hasdian Nur Aini</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-yulia.png" class="card-img-top rounded-3" alt="foto jarkom-Yulia">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Yulia Marshalova</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-ilham.png" class="card-img-top rounded-3" alt="foto jarkom-Ilham">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Muhammad Ilham</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-alfa.png" class="card-img-top rounded-3" alt="foto jarkom-Alfa">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Agustian Alfa Rizqi</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-hamdan.png" class="card-img-top rounded-3" alt="foto jarkom-Hamdan">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Hamdan Arif Budiman</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide ">
-                                        <div class="card bg-transparent hvr-float" style="width: 15rem; border: none;">
-                                            <img src="assets/divisi_jarkom/jarkom-aerly.png" class="card-img-top rounded-3" alt="foto jarkom-Aerly">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Aerly Imeldha Vasyha</h5>
-                                                <p class="card-text">Anggota Divisi JARINGAN & KOMUNIKASI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                        <div class="p-3 md:p-5 flex flex-col flex-grow text-center bg-white relative z-20">
+                            <div class="mb-2 md:mb-4">
+                                <h3 class="text-sm md:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight mb-1 truncate">
+                                    <?= $m['nama'] ?>
+                                </h3>
+                                <p class="text-[10px] md:text-sm font-medium text-slate-500 uppercase tracking-wide border-b border-slate-100 pb-2 md:pb-3 mx-auto w-3/4 md:w-2/3 truncate">
+                                    <?= $m['jabatan'] ?>
+                                </p>
                             </div>
 
+                            <div class="mt-auto">
+                                <a href="https://instagram.com/<?= $m['instagram'] ?>" target="_blank" class="block w-full py-1.5 md:py-2.5 rounded-lg md:rounded-xl bg-slate-50 text-slate-600 text-[10px] md:text-sm font-bold border border-slate-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all duration-300 group/btn">
+                                    <i class="fa-brands fa-instagram md:mr-2"></i>
+                                    <span class="hidden md:inline">Follow Me</span>
+                                    <span class="md:hidden">Follow</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-        </div>
 
-    </section>
-    <!-- Hero Section End -->
+                    </div>
 
-    <!-- Program Kerja Start -->
-    <section id="program">
-        <div class="container Kerja">
-
-            <div class="row align-items-center title">
-                <div class="col-12 text-center">
-                    <h1>Program Kerja</h1>
-                </div>
-            </div>
-            <!-- Row 1 -->
-            <div class="row align-items-center visimisi jarak">
-                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                    <div class="card text-center hvr-float" style="width: 25rem; height: 350px;">
-                        <div class="card-body">
-                            <p class="card-text">Mengelolah Website dan Sosmed (Instagram, Tik-
-                                Tok dan Youtube)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                    <div class="card text-center hvr-float" style="width: 25rem; height: 350px;">
-                        <div class="card-body">
-                            <p class="card-text">Menjembatani
-                                setiap
-                                Dapartemen
-                                dalam kebutuhan
-                                desain</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="row align-items-center visimisi">
-                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                    <div class="card text-center hvr-float" style="width: 25rem; height: 350px;">
-                        <div class="card-body">
-                            <p class="card-text">Membuat konten Edukasi dan kekinan</p>
-                        </div>
-                    </div>
-                </div>
-              <!--  <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                    <div class="card text-center hvr-float" style="width: 25rem; height: 350px;">
-                        <div class="card-body">
-                            <p class="card-text">Workshop
-                                Desain</p>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
+            <?php
+                endforeach;
+            endif;
+            ?>
 
         </div>
-    </section>
-    <!-- Program Kerja End -->
 
-    <button id="scrollToTopBtn" title="Go to top"><i class="bi bi-arrow-up-short hvr-float"></i></button>
+        <div class="mt-10 md:mt-16 text-center">
+            <a href="../index.php#struktur" class="px-6 py-2 md:px-8 md:py-3 rounded-full border-2 border-slate-200 text-slate-500 text-xs md:text-base font-bold hover:border-primary hover:text-primary hover:bg-white transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+            </a>
+        </div>
+
+    </div>
+</section>

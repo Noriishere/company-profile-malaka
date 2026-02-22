@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "question": "Saat ada sebuah proyek besar, apa yang pertama kali kamu pikirkan?",
+    "answers": [
+      { "text": "Bagaimana cara mempromosikan acara ini ke banyak orang? Harus keren di medsos!", "division": "Jarkom" },
+      { "text": "Siapa saja yang terlibat dan bagaimana memastikan semua bekerja sesuai rencana?", "division": "Perencanaan" },
+      { "text": "Bagaimana caranya agar acara ini berjalan tertib dan semua orang mengikuti aturan?", "division": "Disiplin" },
+      { "text": "Apa saja yang perlu disiapkan di lokasi? Siapa yang handle perlengkapan?", "division": "Pencegahan" },
+      { "text": "Apakah semua anggota tim sudah paham tugasnya? Bagaimana mengembangkan skill mereka?", "division": "PSDA" },
+      { "text": "Apa standar sukses acara ini? Bagaimana cara mengukurnya agar bisa lebih baik?", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Kamu paling suka bekerja dengan...",
+    "answers": [
+      { "text": "Konten, desain grafis, dan tren terbaru.", "division": "Jarkom" },
+      { "text": "Data, jadwal, dan konsep strategis.", "division": "Perencanaan" },
+      { "text": "Aturan, ketertiban, dan integritas.", "division": "Disiplin" },
+      { "text": "Tim di lapangan, memastikan semua lancar secara teknis.", "division": "Pencegahan" },
+      { "text": "Orang-orang, membantu mereka berkembang dan mengelola data.", "division": "PSDA" },
+      { "text": "Evaluasi, feedback, dan standar kualitas.", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Jika terjadi masalah di tengah acara, apa reaksimu?",
+    "answers": [
+      { "text": "Mendokumentasikannya sebagai bahan belajar dan mengkomunikasikannya jika perlu.", "division": "Jarkom" },
+      { "text": "Melihat kembali rencana awal dan menyusun rencana darurat.", "division": "Perencanaan" },
+      { "text": "Menenangkan situasi dan memastikan semua orang tetap pada posisinya.", "division": "Disiplin" },
+      { "text": "Langsung turun tangan mencari solusi praktis di lapangan.", "division": "Pencegahan" },
+      { "text": "Memeriksa kondisi tim, memastikan mereka tidak panik dan tetap solid.", "division": "PSDA" },
+      { "text": "Mencatat masalahnya untuk bahan evaluasi mendalam.", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Dalam sebuah kelompok, kamu sering dianggap sebagai orang yang...",
+    "answers": [
+      { "text": "Kreatif dan selalu update.", "division": "Jarkom" },
+      { "text": "Visioner dan pemikir strategis.", "division": "Perencanaan" },
+      { "text": "Tegas dan bertanggung jawab.", "division": "Disiplin" },
+      { "text": "Eksekutor handal dan cepat tanggap.", "division": "Pencegahan" },
+      { "text": "Peduli dan suka membantu teman.", "division": "PSDA" },
+      { "text": "Analitis dan teliti.", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Apa yang membuatmu paling puas dalam sebuah kegiatan?",
+    "answers": [
+      { "text": "Saat konten yang kubuat viral dan banyak yang tahu acara kami.", "division": "Jarkom" },
+      { "text": "Saat acara berjalan sukses, persis seperti yang telah aku rencanakan.", "division": "Perencanaan" },
+      { "text": "Saat acara berjalan dengan lancar, tertib, dan tepat waktu.", "division": "Disiplin" },
+      { "text": "Saat aku berhasil menyelesaikan masalah teknis di lapangan.", "division": "Pencegahan" },
+      { "text": "Saat aku melihat anggota tim lain berkembang dan nyaman.", "division": "PSDA" },
+      { "text": "Saat aku menemukan cara untuk membuat kegiatan kami jadi lebih baik.", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Pilih alat/tools yang paling kamu suka gunakan:",
+    "answers": [
+      { "text": "Canva, CapCut, Instagram, TikTok.", "division": "Jarkom" },
+      { "text": "Google Calendar, Trello, atau buku catatan.", "division": "Perencanaan" },
+      { "text": "Buku aturan atau checklist prosedur.", "division": "Disiplin" },
+      { "text": "Walkie-talkie atau koordinasi langsung di lapangan.", "division": "Pencegahan" },
+      { "text": "Google Forms atau Excel untuk database.", "division": "PSDA" },
+      { "text": "Formulir feedback atau angket evaluasi.", "division": "Penjaminan Mutu" }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Menurutmu, kunci utama organisasi yang sukses adalah...",
+    "answers": [
+      { "text": "Citra dan komunikasi yang baik ke publik.", "division": "Jarkom" },
+      { "text": "Perencanaan program kerja yang matang.", "division": "Perencanaan" },
+      { "text": "Kedisiplinan dan integritas tinggi dari anggotanya.", "division": "Disiplin" },
+      { "text": "Eksekusi program yang solid di lapangan.", "division": "Pencegahan" },
+      { "text": "Pengembangan kualitas setiap anggotanya.", "division": "PSDA" },
+      { "text": "Evaluasi berkelanjutan untuk perbaikan.", "division": "Penjaminan Mutu" }
+    ]
+  }
+]

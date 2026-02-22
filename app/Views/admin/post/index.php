@@ -8,7 +8,7 @@
         </div>
 
         <a href="<?= BASE_URL ?>admin/post/create"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white
+           class="inline-flex items-center gap-2 bg-blue-600 text-white
                   px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
             + Tambah Berita
         </a>
@@ -41,95 +41,94 @@
 
         if (!posts.length) {
             el.innerHTML = `
-            <div class="text-center text-slate-500 py-20">
-                Belum ada berita
-            </div>
-        `;
+                <div class="text-center text-slate-500 py-20">
+                    Belum ada berita
+                </div>
+            `;
             return;
         }
 
         posts.forEach(p => {
             el.innerHTML += `
-        <article class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
 
-            <div class="md:w-56 h-48 md:h-auto">
-                <img src="<?= BASE_URL ?>posts/uploads/${p.image1}"
-                     alt="${p.title}"
-                     class="w-full h-full object-cover">
-            </div>
-
-            <div class="flex-1 p-5 flex flex-col justify-between gap-4">
-                <div class="space-y-2">
-                    <h2 class="text-lg font-semibold line-clamp-2">
-                        ${p.title}
-                    </h2>
-
-                    <div class="text-sm text-slate-500 flex gap-4">
-                        <span>👤 ${p.creator}</span>
-                        <span>📅 ${formatDate(p.created_at)}</span>
+                    <div class="md:w-56 h-48 md:h-auto">
+                        <img src="<?= BASE_URL ?>posts/uploads/${p.thumbnail}"
+                             alt="${p.title}"
+                             class="w-full h-full object-cover">
                     </div>
 
-                    <p class="text-sm text-slate-600 line-clamp-3">
-                        ${stripHtml(p.paragraph1)}
-                    </p>
-                </div>
+                    <div class="flex-1 p-5 flex flex-col justify-between gap-4">
+                        <div class="space-y-2">
+                            <h2 class="text-lg font-semibold line-clamp-2">
+                                ${p.title}
+                            </h2>
 
-                <div class="flex items-center gap-3">
-                    <a href="/admin/post/edit/${p.id}"
-                       class="text-sm font-medium text-blue-600 hover:underline">
-                        Edit
-                    </a>
-                    <a href="#"
-                    onclick="deletePost(${p.id}); return false;"
-                    class="text-sm font-medium text-red-600 hover:underline">
-                        Hapus
-                    </a>
-                </div>
-            </div>
-        </article>`;
+                            <div class="text-sm text-slate-500 flex flex-wrap gap-4">
+                                <span>👤 ${p.creator}</span>
+                                <span>📅 ${formatDate(p.created_at)}</span>
+                                <span class="px-2 py-0.5 bg-slate-100 rounded text-xs font-medium">
+                                    ${p.category}
+                                </span>
+                            </div>
+
+                            <p class="text-sm text-slate-600 line-clamp-3">
+                                ${stripHtml(p.paragraph)}
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <a href="<?= BASE_URL ?>admin/post/edit/${p.id}"
+                               class="text-sm font-medium text-blue-600 hover:underline">
+                                Edit
+                            </a>
+
+                            <a href="#"
+                               onclick="deletePost(${p.id}); return false;"
+                               class="text-sm font-medium text-red-600 hover:underline">
+                                Hapus
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            `;
         });
     }
 
     function deletePost(id) {
-        if (!confirm('Yakin ingin menghapus berita ini?')) {
-            return;
-        }
+        if (!confirm('Yakin ingin menghapus berita ini?')) return;
 
         fetch(`<?= BASE_URL ?>admin/post/delete/${id}`, {
-                method: 'POST'
-            })
-            .then(r => r.json())
-            .then(r => {
-                if (!r.success) {
-                    alert(r.message);
-                    return;
-                }
-
-                alert('Berita berhasil dihapus');
-                location.reload();
-            })
-            .catch(err => {
-                console.error(err);
-                alert('Gagal menghapus berita');
-            });
+            method: 'POST'
+        })
+        .then(r => r.json())
+        .then(r => {
+            if (!r.success) {
+                alert(r.message);
+                return;
+            }
+            alert('Berita berhasil dihapus');
+            fetchPosts(currentPage);
+        })
+        .catch(() => alert('Gagal menghapus berita'));
     }
 
     function renderPagination(p) {
         document.getElementById('pagination').innerHTML = `
-        <span>Halaman ${p.current_page} dari ${p.last_page}</span>
-        <div class="flex gap-2">
-            <button onclick="fetchPosts(${p.current_page - 1})"
-                ${p.current_page <= 1 ? 'disabled' : ''}
-                class="px-3 py-1 border rounded bg-white disabled:opacity-50">
-                Prev
-            </button>
-            <button onclick="fetchPosts(${p.current_page + 1})"
-                ${p.current_page >= p.last_page ? 'disabled' : ''}
-                class="px-3 py-1 border rounded bg-white disabled:opacity-50">
-                Next
-            </button>
-        </div>
-    `;
+            <span>Halaman ${p.current_page} dari ${p.last_page}</span>
+            <div class="flex gap-2">
+                <button onclick="fetchPosts(${p.current_page - 1})"
+                    ${p.current_page <= 1 ? 'disabled' : ''}
+                    class="px-3 py-1 border rounded bg-white disabled:opacity-50">
+                    Prev
+                </button>
+                <button onclick="fetchPosts(${p.current_page + 1})"
+                    ${p.current_page >= p.last_page ? 'disabled' : ''}
+                    class="px-3 py-1 border rounded bg-white disabled:opacity-50">
+                    Next
+                </button>
+            </div>
+        `;
     }
 
     function stripHtml(html) {
@@ -145,5 +144,6 @@
             year: 'numeric'
         });
     }
+
     fetchPosts();
 </script>

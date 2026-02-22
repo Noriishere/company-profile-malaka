@@ -52,13 +52,8 @@ $menus = [
                 'icon'  => 'fa-id-card',
             ],
             [
-                'label' => 'Security',
-                'href'  => 'admin/security/index',
-                'icon'  => 'fa-lock',
-            ],
-            [
-                'label' => 'Laporan',
-                'href'  => 'admin/report/index',
+                'label' => 'Laporan visitor',
+                'href'  => 'admin/visitors/index',
                 'icon'  => 'fa-file '
             ],
             [
@@ -114,7 +109,7 @@ function pillClasses(bool $active): string
     <script src="https://cdn.jsdelivr.net/npm/tinymce@6.8.3/tinymce.min.js"></script>
     <script>
         tinymce.init({
-            selector: '#paragraph1, #paragraph2',
+            selector: '#paragraph',
             height: 300,
             menubar: false,
             plugins: 'lists link image media code table fullscreen',
@@ -145,7 +140,7 @@ function pillClasses(bool $active): string
 
     <aside id="sidebar" class="bg-biru text-white fixed top-0 left-0 z-50 h-screen w-64 flex flex-col gap-6 py-6 px-4 border-r border-gray-200 bg-backgroun transition-transform duration-300 transform -translate-x-full lg:translate-x-0">
         <div class="flex items-center gap-3 px-2">
-            <img src="<?= BASE_URL ?>assets/logo_malaka.png" class="h-10 w-10">
+            <img src="<?= BASE_URL ?>image/logo_malaka.png" class="h-10 w-10">
             <span class="text-2xl font-bold text-brand-500">
                 MALAKA
             </span>

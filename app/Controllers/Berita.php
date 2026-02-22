@@ -4,11 +4,16 @@ namespace Malaka\CompanyProfile\Controllers;
 
 use Malaka\CompanyProfile\Core\Controller;
 use Malaka\CompanyProfile\Models\PostModel;
+use Malaka\CompanyProfile\Services\VisitorServices;
 
 class Berita extends Controller
 {
     public function index()
     {
+        $visitorService = new VisitorServices();
+        $totalVisitors  = $visitorService->handle();
+
+        $data['visitors'] = $totalVisitors;
         $data['Judul'] = "Malaka | Berita";
         $this->view('utility/header', $data);
         $this->view('berita/index', $data);
