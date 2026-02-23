@@ -9,7 +9,7 @@ class Bph extends Controller{
     public function index(){
         $visitorService = new VisitorServices();
         $totalVisitors  = $visitorService->handle();
-
+        $data['watermark'] = "Ronekimedia.com";
         $data['visitors'] = $totalVisitors;
         $data['json'] = "bph";
         $data['division'] = "Badan Pengurus Harian";

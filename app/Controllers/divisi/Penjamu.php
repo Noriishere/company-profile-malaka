@@ -9,7 +9,7 @@ class Penjamu extends Controller{
     public function index(){
         $visitorService = new VisitorServices();
         $totalVisitors  = $visitorService->handle();
-
+        $data['watermark'] = "Ronekimedia.com";
         $data['visitors'] = $totalVisitors;
         $data['json'] = "penjamu";
         $data['division'] = "Penjaminan Mutu";

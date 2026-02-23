@@ -1,7 +1,6 @@
 <?php
-$host = $_SERVER['HTTP_HOST'] ?? 'company-profile-malaka.test';
+$host = $_SERVER['HTTP_HOST'] ?? 'malakaubpkarawang.com';
 define('BASE_URL', 'http://' . $host . '/');
-define('BASE_ASSET', BASE_URL);
 define('DB_HOST', $_ENV['DB_HOST']);
 define('DB_USER', $_ENV['DB_USER']);
 define('DB_PASS', $_ENV['DB_PASS']);

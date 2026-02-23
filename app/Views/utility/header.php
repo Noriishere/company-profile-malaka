@@ -4,6 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Selamat datang di MALAKA, Unit Kegiatan Mahasiswa Melawan Narkotika di Universitas Buana Perjuangan Karawang. Temukan informasi tentang program kerja, visi misi, dan struktur organisasi kami.">
+    <meta name="keywords"
+        content="MALAKA UBP, UKM MALAKA UBP KARAWANG, UNIT KEGIATAN MAHASISWA MELAWAN NARKOTIKA, UBP Karawang, mahasiswa, narkotika, organisasi mahasiswa, kampus, universitas, anti narkotika">
+    <meta name="author" content="MALAKA UBP Karawang">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="MALAKA | Mahasiswa Melawan Narkotika UBP Karawang">
+    <meta property="og:description"
+        content="Temukan informasi lengkap tentang MALAKA, UKM yang berperan aktif melawan narkotika di UBP Karawang.">
+    <meta property="og:image" content="assets/logo_malaka.png">
+    <meta property="og:url" content="https://malakaubpkarawang.my.id">
+    <meta property="og:type" content="website">
+
+
+    <meta property="og:title" content="MALAKA | UBP Karawang">
+    <meta property="og:description"
+        content="Unit Kegiatan Mahasiswa Melawan Narkotika di Universitas Buana Perjuangan Karawang.">
+    <meta property="og:image" content="assets/logo_malaka.png">
+    <meta property="og:url" content="https://malakaubpkarawang.my.id">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MALAKA | Mahasiswa Melawan Narkotika UBP Karawang">
+    <meta name="twitter:description"
+        content="Bersama MALAKA, kami berkomitmen memberantas narkotika dan membangun generasi muda sehat dan cerdas.">
+    <meta name="twitter:image" content="assets/logo_malaka.png">
+
+    <link rel="canonical" href="https://malakaubpkarawang.my.id">
+
     <title><?= htmlspecialchars($data['Judul'] ?? 'Malaka - Mahasiswa Melawan Narkotika') ?></title>
 
     <script src="https://cdn.tailwindcss.com"></script>

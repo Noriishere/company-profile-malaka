@@ -11,7 +11,7 @@ class Home extends Controller
     {
         $visitorService = new VisitorServices();
         $totalVisitors  = $visitorService->handle();
-
+        $data['watermark'] = "Ronekimedia.com";
         $data['visitors'] = $totalVisitors;
         $data['Judul'] = "Malaka | Mahasiswa Melawan Narkotika";
         $this->view('utility/header', $data);

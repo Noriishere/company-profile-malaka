@@ -17,7 +17,7 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
-                <a href="#" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
+                <a href="mailto:ronekimedia@gmail.com" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-blue-50 text-primary flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
@@ -28,36 +28,36 @@
                     </span>
                 </a>
 
-                <a href="#" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-pink-500/30 hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
+                <a href="https://www.instagram.com/malaka.ubpkarawang" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-pink-500/30 hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-3xl mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Instagram</h3>
                     <p class="text-sm text-slate-500 mb-4">Update kegiatan & dokumentasi</p>
                     <span class="text-pink-600 font-bold text-sm group-hover:underline">
-                        @nekonime.idn
+                        @malaka.ubpkarawang
                     </span>
                 </a>
 
-                <a href="#" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-black/30 hover:shadow-black/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
+                <a href="https://www.tiktok.com/@malaka.ubpkarawang" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-black/30 hover:shadow-black/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-gray-100 text-black flex items-center justify-center text-3xl mb-6 group-hover:bg-black group-hover:text-white transition-colors duration-300">
                         <i class="fa-brands fa-tiktok"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">TikTok</h3>
                     <p class="text-sm text-slate-500 mb-4">Hiburan seru</p>
                     <span class="text-black font-bold text-sm group-hover:underline">
-                        @nekonime.idn
+                        @malaka.ubpkarawang
                     </span>
                 </a>
 
-                <a href="#" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-red-500/30 hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
+                <a href="https://www.youtube.com/@malakaubpkarawang" target="_blank" class="group bg-white p-8 rounded-[2rem] border-2 border-slate-50 shadow-xl shadow-slate-200/50 hover:border-red-500/30 hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-3xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
                         <i class="fa-brands fa-youtube"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">YouTube</h3>
                     <p class="text-sm text-slate-500 mb-4">Video profil lengkap</p>
                     <span class="text-red-600 font-bold text-sm group-hover:underline">
-                        @nekonime.idn
+                        @malakaubpkarawang
                     </span>
                 </a>
 

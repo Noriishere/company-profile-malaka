@@ -26,12 +26,17 @@ $menus = [
         'icon'  => 'fa-newspaper',
     ],
     [
+        'label' => 'Manage Json Divisi',
+        'href'  => 'admin/json',
+        'icon'  => 'fa-code',
+    ],
+    [
         'label' => 'Table',
         'icon'  => 'fa-table',
         'children' => [
             [
                 'label' => 'Admin',
-                'href'  => 'admin/table/admin',
+                'href'  => 'admin/table',
                 'icon'  => 'fa-user-shield',
             ],
             [
@@ -58,7 +63,7 @@ $menus = [
             ],
             [
                 'label' => 'Logout',
-                'href'  => 'admin/logout',
+                'href'  => 'admin/auth/logout',
                 'icon'  => 'fa-right-from-bracket',
                 'danger' => true,
             ],

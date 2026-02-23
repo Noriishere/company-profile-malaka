@@ -1,7 +1,7 @@
 <?php
 
 return function ($db) {
-    $db->exec("DELETE FROM users");
+    // $db->exec("DELETE FROM users");
 
     $stmt = $db->prepare("
         INSERT INTO users (username, password, email,role) VALUES (?,?,?,?)
@@ -9,8 +9,8 @@ return function ($db) {
     // kalo ada isinya baru di uncomment
     $stmt->execute([
         'malakapost',
-        password_hash('admin123', PASSWORD_BCRYPT),
-        'malaka@post.com',
+        password_hash('Malaka2026ubpk', PASSWORD_BCRYPT),
+        'malakapost@malaka.com',
         'admin'
     ]);
 };

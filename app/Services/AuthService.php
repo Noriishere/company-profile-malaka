@@ -28,7 +28,8 @@ class AuthService
         return [
             'id' => $admin['id'],
             'username' => $admin['username'],
-            'email' => $admin['email']
+            'email' => $admin['email'],
+            'role' => $admin['role']
         ];
     }
 }

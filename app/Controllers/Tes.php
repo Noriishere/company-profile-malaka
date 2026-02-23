@@ -9,7 +9,7 @@ class Tes extends Controller{
     public function index(){
         $visitorService = new VisitorServices();
         $totalVisitors  = $visitorService->handle();
-
+        $data['watermark'] = "Ronekimedia.com";
         $data['visitors'] = $totalVisitors;
         $data['Judul'] = "Malaka | Tes Kecocokan Divisi";
         $this->view('utility/header', $data);

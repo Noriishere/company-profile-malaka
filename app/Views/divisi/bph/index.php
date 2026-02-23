@@ -45,7 +45,7 @@
 
                         <div class="relative w-full aspect-[3/4] overflow-hidden bg-gray-200">
                             <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-300"></div>
-                            <img src="<?= BASE_URL ?><?= $m['foto'] ?>" alt="<?= $m['nama'] ?>" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 backface-hidden">
+                            <img src="<?= $m['foto'] ?>" alt="<?= $m['nama'] ?>" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 backface-hidden">
 
                             <div class="absolute top-2 right-2 md:top-3 md:right-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold text-slate-600 shadow-sm z-20 flex items-center gap-1">
                                 <i class="fa-solid fa-cake-candles text-pink-500"></i>

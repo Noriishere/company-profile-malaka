@@ -23,14 +23,14 @@
                 <p class="text-[10px] md:text-xs font-bold text-slate-900">
                     Copyright © 2026 <span class="text-primary">Malaka UBP Karawang</span>
                 </p>
-                <div class="flex items-center gap-3">
-                    <a href="#" class="text-slate-900 hover:text-red-600 transition-colors duration-300">
+                <div class="flex items-center lg:mr-5 gap-3">
+                    <a href="https://www.youtube.com/@malakaubpkarawang" target="_blank" class="text-slate-900 hover:text-red-600 transition-colors duration-300">
                         <i class="fa-brands fa-youtube text-lg"></i>
                     </a>
-                    <a href="#" class="text-slate-900 hover:text-black transition-colors duration-300">
+                    <a href="https://www.tiktok.com/@malaka.ubpkarawang" target="_blank" class="text-slate-900 hover:text-black transition-colors duration-300">
                         <i class="fa-brands fa-tiktok text-lg"></i>
                     </a>
-                    <a href="#" class="text-slate-900 hover:text-pink-600 transition-colors duration-300">
+                    <a href="https://www.instagram.com/malaka.ubpkarawang" target="_blank" class="text-slate-900 hover:text-pink-600 transition-colors duration-300">
                         <i class="fa-brands fa-instagram text-lg"></i>
                     </a>
                 </div>
@@ -47,7 +47,7 @@
     <p class="text-[10px] md:text-xs font-medium text-slate-500 opacity-30">
         Website ini dibuat dan dikelola oleh tim
         <a href="https://ronekimedia.com" target="_blank" class="font-bold text-primary pointer-events-auto hover:underline">
-            Ronekimedia.com
+            <?= htmlspecialchars($data['watermark']) ?>
         </a>
     </p>
 </div>

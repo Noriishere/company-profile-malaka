@@ -90,7 +90,6 @@
          </div>
      </div>
  </div>
-<p> <?= htmlspecialchars($data['visitors']) ?></p>
  <section id="struktur" class="w-full pt-6 pb-12 lg:pt-8 lg:pb-16 bg-white">
      <div class="container mx-auto px-4 lg:px-8">
          <div class="text-left mb-8 lg:mb-10">
@@ -210,7 +209,7 @@
          </p>
 
          <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-4 md:gap-6">
-             <a href="#" class="w-full md:w-64 h-14 rounded-full border-2 border-gray-500 text-gray-300 font-bold tracking-wide hover:border-white hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center justify-center">
+             <a href="<?= BASE_URL ?>kontak" class="w-full md:w-64 h-14 rounded-full border-2 border-gray-500 text-gray-300 font-bold tracking-wide hover:border-white hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center justify-center">
                  CONTACT PERSON
              </a>
              <a href="#" class="w-full md:w-72 h-14 rounded-full bg-primary text-white font-extrabold tracking-wide hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
