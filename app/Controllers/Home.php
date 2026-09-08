@@ -7,6 +7,10 @@ use Malaka\CompanyProfile\Services\VisitorServices;
 
 class Home extends Controller
 {
+    public function __construct()
+    {
+        $this->maintenanceModeCheck();
+    }
     public function index()
     {
         $visitorService = new VisitorServices();

@@ -2,6 +2,8 @@
 
 namespace Malaka\CompanyProfile\Core;
 
+use Malaka\CompanyProfile\Services\MaintenanceService;
+
 class Controller
 {
     public function view($view, $data = [])
@@ -45,6 +47,17 @@ class Controller
         if (!in_array($_SESSION['admin']['role'], $roles)) {
             http_response_code(403);
             $this->view('app/forbidden');
+            exit;
+        }
+    }
+    protected function maintenanceModeCheck()
+    {
+        $maintenanceService = new MaintenanceService();
+        $status = $maintenanceService->getStatus();
+        if ($status['is_active']) {
+            $data['Judul'] = "Malaka | Under Maintenance";
+            $data['message'] = "Situs sedang dalam perawatan. Kembali lagi nanti.";
+            $this->view('app/maintenance', $data);
             exit;
         }
     }

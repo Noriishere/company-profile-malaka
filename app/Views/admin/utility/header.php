@@ -62,6 +62,11 @@ $menus = [
                 'icon'  => 'fa-file '
             ],
             [
+                'label' => 'Maintenance',
+                'href'  => 'admin/maintenance/index',
+                'icon'  => 'fa-gear '
+            ],
+            [
                 'label' => 'Logout',
                 'href'  => 'admin/auth/logout',
                 'icon'  => 'fa-right-from-bracket',
