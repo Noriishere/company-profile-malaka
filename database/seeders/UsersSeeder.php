@@ -8,9 +8,5 @@ return function ($db) {
     ");
     // kalo ada isinya baru di uncomment
     $stmt->execute([
-        'malakapost',
-        password_hash('Malaka2026ubpk', PASSWORD_BCRYPT),
-        'malakapost@malaka.com',
-        'admin'
     ]);
 };
